@@ -1,6 +1,7 @@
 # Apache image tag
 FROM httpd:2.4
 WORKDIR /usr/local/apache2/htdocs/
-COPY WEB-tiny /usr/local/apache2/htdocs/WEB-tiny
-EXPOSE 80
-CMD ["apachectl", "-D", "FOREGROUND"]
+COPY web.conf /usr/local/apache2/conf/web.conf
+
+RUN echo "Include /usr/local/apache2/conf/web.conf" \
+    >> /usr/local/apache2/conf/httpd.conf

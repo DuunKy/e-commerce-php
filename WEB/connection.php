@@ -3,10 +3,10 @@
 $conn = "";
 
 try {
-    $servername = "localhost:3306";
+    $servername = "admin_db";
     $dbname = "phpMYSQL";
     $username = "root";
-    $password = "";
+    $password = "example";
 
     $conn = new PDO(
         "mysql:host=$servername; dbname=phpMYSQL",

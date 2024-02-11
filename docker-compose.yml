@@ -1,18 +1,22 @@
 version: '3'
 
 services:
+  admin_php:
+    build: ./PHP
+    container_name: admin_php
+    volumes:
+      - ./WEB:/usr/local/apache2/htdocs
+
   admin_web:
-    build: ./e-commerce-PHP/WEB
-    image: httpd:latest
+    build: ./WEB
     container_name: admin_web
     ports:
       - '8000:80'
     volumes:
-      - ./website:/usr/local/apache2/htdocs
-
+      - ./WEB:/usr/local/apache2/htdocs
 
   admin_db:
-    build: ./e-commerce-PHP/DB
+    build: ./DB
     image: mariadb
     container_name: admin_db
     restart: always
