@@ -6,8 +6,8 @@
 }
 
 .imgLogo {
-    height: 100px ;
-    width: 400px;
+    height: 125px ;
+    width: 350px;
 }
 
 .logoContainer {
@@ -16,12 +16,13 @@
 
 .connectRow {
     background-color: whitesmoke;
+    overflow-y: auto; /* Add scrollbar if content overflows */
 }
 @media only screen and (max-width: 768px) {
 
 .imgLogo {
     height: 100px ;
-    width: 300px;
+    width: 250px;
 
 }    
 
@@ -31,3 +32,11 @@
     
 }
     
+
+.connectRow .formContainer {
+    height: 100%; /* Ensure form container takes full height of connectRow */
+}
+
+.container-fluid {
+    overflow: hidden; /* Hide overflow content of the container */
+}
