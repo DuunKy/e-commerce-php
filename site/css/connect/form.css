@@ -2,18 +2,22 @@
     width: 100%;
     background-color: white;
     outline: none;
-    border-top: 10px;
-    border-left: 10px;
-    border-right: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     border-color: black
 }
 
 .buttonForm {
-   background-color: deepskyblue;
     color: black;
     border: none;
-    
+    background: rgb(15, 235, 209);
     border-radius: 6px;
+}
+
+.buttonForm:hover {
+    background: rgb(6, 234, 234);
+    transition: 0.5s ;
 }
 
 
