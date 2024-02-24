@@ -22,24 +22,35 @@
     padding: 1.25px; /* Adjust as needed */
     color:whitesmoke; /* Set the text color */
     display: flex; /* Align children in a row */
-    flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
     backdrop-filter: blur(1px);
+    flex-direction: row;
+    justify-content: space-between;
     
 }
 
 cardTxtTitle {
     font-size: 26px;
     position: relative;
-    display: block;
+    display: inline;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: auto; 
+    text-shadow: 0 0 8px #000000;
+    
+
+}
+
+cardTxtMoney {
+    font-size: 26px;
+    position: relative;
+    display: inline;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     margin-top: auto; 
     text-shadow: 0 0 8px #000000
-
-
 }
+
 
 cardTxt {
     font-size: 18px;
@@ -48,6 +59,7 @@ cardTxt {
     transition: opacity 1.0s ease-in-out;
     text-shadow: 0 0 8px #070202;
 }
+
 
 .buttonCard {
     display: none;
@@ -64,10 +76,16 @@ cardTxt {
     cardTxt {
         transition: 0.5s;
         opacity: 1;
+   
         
     }
     
     cardTxtTitle {
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    cardTxtMoney {
         transition: 0.5s;
         opacity: 0;
     }

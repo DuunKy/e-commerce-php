@@ -26,11 +26,11 @@ if (isset($_POST['product_type'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/053130d5ea.js" crossorigin="anonymous"></script>
-        <link href="css/index/headerIndex.css" rel="stylesheet">
-        <link href="css/tools/color.css" rel="stylesheet">
-        <link href="css/tools/txt.css" rel="stylesheet">
-        <link href="css/index/navbarIndex.css" rel="stylesheet">
-        <link href="css/index/cardIndex.css" rel="stylesheet">
+        <link href="css/color.css" rel="stylesheet">
+        <link href="css/txt.css" rel="stylesheet">
+        <link href="css/navbarIndex.css" rel="stylesheet">
+        <link href="css/cardIndex.css" rel="stylesheet">
+        <link href="css/headerIndex.css" rel="stylesheet">
         
         
         <title>convert to php</title>
@@ -45,7 +45,7 @@ if (isset($_POST['product_type'])) {
 
                 <div class="col-2">
                     <a href="index.php">
-                        <img src="css/tools/img/theD.png" alt="Logo" class="imgLogo">
+                        <img src="css/img/theD.png" alt="Logo" class="imgLogo">
                     </a>
                 </div>
 
@@ -58,11 +58,11 @@ if (isset($_POST['product_type'])) {
 
                 <div class="col-3 colHeader">
                     
-                        <a href="/site/html/admin.html">
+                        <a href="/eduncky/site/connect.php">
                             <button class="buttonHeader"><i class="fa-solid fa-user" style="color: black;"></i>&nbsp;Account</button>
                         </a>
                         
-                        <a href="/site/html/admin.html">
+                        <a href="/eduncky/site/product.php">
                             <button class="buttonHeader"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>&nbsp;ShopList</button>
                         </a>
                 </div>
@@ -187,11 +187,17 @@ if (isset($_POST['product_type'])) {
                                     <img src="css/tools/img/Wanderer.jpg" alt="" class="cardImg">
                                     <div class="cardContent text-center">
                                         <cardTxtTitle>
-                                            <?php echo $productsData['Product_Name'] . ' ' . $productsData['Product_Price']; ?>
+                                        &nbsp;
+                                            <?php echo $productsData['Product_Name'] ?>
                                         </cardTxtTitle>
+                                        <cardTxtMoney>
+                                            <?php echo $productsData['Product_Price'] . ' euro'; ?>
+                                            &nbsp;
+                                        </cardTxtMoney>
                                         <cardTxt>
                                             <?php echo $productsData['Product_Description']; ?>
                                         </cardTxt>
+
                                         
                                     </div>
                                 </div>

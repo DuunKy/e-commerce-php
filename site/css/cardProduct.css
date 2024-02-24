@@ -1,0 +1,14 @@
+.leftProduct {
+
+}
+
+.rightProduct {
+
+}
+
+.cardImg {
+    height: 700px;
+    width: 500px;
+    border-radius: 25px;    
+    color:whitesmoke; /* Set the text color */
+}
