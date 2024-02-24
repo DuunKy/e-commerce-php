@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetchObject(); // To not fetchAll()
 
     if ($user) { // If user is full
-        header("location: adminpage.php"); // Uses adminpage.php
+        header("location: admintemplate/adminindex.html"); // Uses adminindex.html
     }
     else {
         echo "<script>";
