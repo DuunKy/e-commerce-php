@@ -1,6 +1,14 @@
 version: '3'
 
 services:
+  admin_api:
+    build: ./CS-API
+    container_name: admin_API
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./CS-API:/api
+
   admin_php:
     build: ./PHP
     container_name: admin_php
