@@ -37,12 +37,25 @@
     margin-top: 40px;    
     }
 
+
+.containerConnectInscription {
+    background-color: white;
+    height: 300px;
+    width: 350px;
+    text-align: center;
+    margin: auto; /* Center horizontally */
+    margin-top: 40px;    
+}
+
+
+
 .hyperlink {
     color: black;
 }
 
 
 .formContainer {
+
 height: 400px;
 align-items: center;
 justify-content: center;

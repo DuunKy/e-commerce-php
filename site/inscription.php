@@ -56,37 +56,36 @@
 
                 <form id="contactForm" action="" method="">
                 
-                    <div class="row ">
+                    <div class="row  ">
 
 
                         <div class="col-12">
-                            <formTitle>Connection / inscription </formTitle>
-                            <p>Saisissez votre e-mail pour vous connecter ou créer un compte</p>
+                            <formTitle>Création de compte </formTitle>
+                            <p>Saisissez vos informations</p>
                         </div>
 
 
 
                      
 
-                        <div class="col-12  text-center  p-4 containerConnect ">
+                        <div class="col-12  text-center  p-4 containerConnectInscription ">
+
 
                             <div class="col-12 ">
-                                <input type="email" class="formAbout" placeholder="Email"  required>
+                                <input type="email" class="formAbout" placeholder="Email" required>
+                            </div>
+
+                            <div class="col-12 pt-5 ">
+                                <input type="text" class="formAbout" placeholder="Nom" required>
                             </div>
     
-                            <div class="col-12 pt-2 ">
-                                <input type="password" class="formAbout" placeholder="Password"  required>
+                            <div class="col-12 pt-5 ">
+                                <input type="password" class="formAbout" placeholder="Mot de passe"  required>
                             </div>  
     
                             
-                            <div class="col-12 pt-3">
-                                <input type="submit" class="buttonForm"  value=" Connection ">
-                            </div>
-
-                            <div class="col-12 pt-2">
-
-                            <a href="inscription.php" class="hyperlink">Create account</a>
-                            
+                            <div class="col-12 pt-4">
+                                <input type="submit" class="buttonForm"  value=" Créer mon compte ">
                             </div>
 
                             

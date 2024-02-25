@@ -96,21 +96,22 @@ if (isset($_GET['product_id'])) {
 
                                     <div class="txtProduct ">
                                         <txtProductType>
-                                            > beer
+                                            > 
                                             <?php echo $product['Product_Type'] ?>
                                         </txtProductType>
                                         <br>
 
                                         <txtProductName>
-                                            Thibaut
+                                            
                                             <?php echo $product['Product_Name'] ?>
                                         </txtProductName>
                                         <br>
 
                                         <txtProductPrice>
-                                            Price : 10euro
+                                            Price : 
                                             
                                             <?php echo $product['Product_Price'] ?>
+                                            euro
                                         </txtProductPrice>
                                         <br>
 
@@ -127,8 +128,7 @@ if (isset($_GET['product_id'])) {
 
                                 
                             <div class="col-12 pt-5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas at laboriosam quia vero aliquid saepe eum consequuntur tempore iusto, quam incidunt, deleniti hic nostrum error! Consectetur quibusdam debitis quas deserunt.
-                            
+                                
                                 <?php echo $product['Product_Description'] ?>
                             </div>
 
@@ -167,7 +167,6 @@ if (isset($_GET['product_id'])) {
 
 
  
-
 
 
 <script src="js/main.js"></script>
