@@ -12,6 +12,13 @@
     border-radius: 25px;
 }
 
+.card-link {
+    /* Define your styles for card links here */
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
 .cardContent {
     position: absolute;
     top: 0;

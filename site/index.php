@@ -181,13 +181,14 @@ if (isset($_POST['product_type'])) {
                
         
                 <div class="row">
-                        <?php foreach ($filteredProducts as $productsData): ?>
-                            <div class="col-12 col-md-4 pt-4 ">
+                    <?php foreach ($filteredProducts as $productsData): ?>
+                        <div class="col-12 col-md-4 pt-4">
+                            <a href="product.php?product_id=<?php echo $productsData['Product_Id']; ?>">
                                 <div class="card m-3">
                                     <img src="css/tools/img/Wanderer.jpg" alt="" class="cardImg">
                                     <div class="cardContent text-center">
                                         <cardTxtTitle>
-                                        &nbsp;
+                                            &nbsp;
                                             <?php echo $productsData['Product_Name'] ?>
                                         </cardTxtTitle>
                                         <cardTxtMoney>
@@ -197,12 +198,16 @@ if (isset($_POST['product_type'])) {
                                         <cardTxt>
                                             <?php echo $productsData['Product_Description']; ?>
                                         </cardTxt>
-
-                                        
                                     </div>
                                 </div>
-                            </div>
-                        <?php endforeach; ?>
+                            </a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+
+
+
                     </div>
 
 
