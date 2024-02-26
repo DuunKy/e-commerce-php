@@ -1,7 +1,9 @@
 <?php
-// connection to the phpmyadmin db with xampp
-$db = new PDO('mysql:host=localhost;dbname=eduncky', 'tfgi', 'azerty');
+// Start a session
+session_start();
 
+// connection to the phpmyadmin db with xampp
+$db = new PDO('mysql:host=localhost;dbname=duncan', 'tfgi', 'azerty');
 
 if (isset($_GET['product_id'])) {
     // Get the product details from the database based on the product_id
@@ -9,8 +11,6 @@ if (isset($_GET['product_id'])) {
     $queryProduct->bindParam(':product_id', $_GET['product_id']);
     $queryProduct->execute();
     $product = $queryProduct->fetch(PDO::FETCH_ASSOC);
-
-
 } else {
     echo 'Product ID not provided';
 }
@@ -56,9 +56,15 @@ if (isset($_GET['product_id'])) {
 
             <div class="col-3 colHeader">
                 
-                    <a href="/eduncky/site/connect.php">
-                        <button class="buttonHeader"><i class="fa-solid fa-user" style="color: black;"></i>&nbsp;Account</button>
-                    </a>
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        // Display the user's name
+                        echo "<a href='connect.php'><button class='buttonHeader'><i class='fa-solid fa-user' style='color: black;'></i>&nbsp;" . $_SESSION['username'] . "</button></a>";
+                    } else {
+                        // Display the "ACCOUNT" button that redirects to connection.php
+                        echo "<a href='connect.php'><button class='buttonHeader'><i class='fa-solid fa-user' style='color: black;'></i>&nbsp;Account</button></a>";
+                    }
+                    ?>
                     
                     <a href="/eduncky/site/product.php">
                         <button class="buttonHeader"><i class="fa-solid fa-cart-shopping" style="color: black;"></i>&nbsp;ShopList</button>

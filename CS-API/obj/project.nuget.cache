@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CyvrzGAM537VzpXIn69w/ENAZAX9TsJ5WdqtD27Yj9d2p9cRVfzqSD7dez4/dktnCjEukIHViFPgu7KB6Y8BQg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\csharp-project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tibof\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\tibof\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
