@@ -100,7 +100,7 @@ if (isset($_POST['logout'])) {
 
 
         <div class="col-12 col-md-4 logoContainer">
-            <a href="/eduncky/site/index.php">
+            <a href="index.php">
                 <img src="css/img/theD.png" alt="Logo" class="imgLogo">
             </a>
         </div>
