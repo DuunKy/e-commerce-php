@@ -66,14 +66,14 @@
             <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Client information:</h6>
-                    <a class="collapse-item active" href="CRUD/Users.php">Users</a>
+                    <a class="collapse-item" href="CRUD/Users.php">Users</a>
                     <!--                    <a class="collapse-item" href="Photos.html">Photos</a>
                                         <a class="collapse-item" href="Addresses.html">Addresses</a>
                                         <a class="collapse-item" href="Carts.html">Carts</a>
                                         <a class="collapse-item" href="Payments.html">Payments</a>-->
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Sales information:</h6>
-                    <a class="collapse-item" href="CRUD/Products.php">Products</a>
+                    <a class="collapse-item active" href="CRUD/Products.php">Products</a>
                     <!--                   <a class="collapse-item" href="ShoppingLists.html">ShoppingLists</a>
                                        <a class="collapse-item" href="Commands.html">Commands</a>
                                        <a class="collapse-item" href="Invoices.html">Invoices</a>

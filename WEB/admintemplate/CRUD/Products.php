@@ -63,14 +63,14 @@
             <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Client information:</h6>
-                    <a class="collapse-item active" href="Users.php">Users</a>
+                    <a class="collapse-item" href="Users.php">Users</a>
                     <!--                    <a class="collapse-item" href="Photos.html">Photos</a>
                                         <a class="collapse-item" href="Addresses.html">Addresses</a>
                                         <a class="collapse-item" href="Carts.html">Carts</a>
                                         <a class="collapse-item" href="Payments.html">Payments</a>-->
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Sales information:</h6>
-                    <a class="collapse-item" href="Products.php">Products</a>
+                    <a class="collapse-item active" href="Products.php">Products</a>
                     <!--                   <a class="collapse-item" href="ShoppingLists.html">ShoppingLists</a>
                                        <a class="collapse-item" href="Commands.html">Commands</a>
                                        <a class="collapse-item" href="Invoices.html">Invoices</a>
@@ -352,15 +352,62 @@
                                             <label>Enter your product type: <input type="text" name="Product_Type" required /></label>
                                         </div>
                                         <div class="form">
-                                            <label>Enter your product price: <input type="number" name="Product_Price" required /></label>
+                                            <label>Enter your product price: <input type="number" step="1" name="Product_Price" required /></label>
                                         </div>
                                         <div class="form">
-                                            <label>Enter number of products left: <input type="number" name="Product_NumberLeft" required /></label>
+                                            <label>Enter number of products left: <input type="number" step="1" name="Product_NumberLeft" required /></label>
                                         </div>
                                         <div class="form">
                                             <input type="submit" value="Send" />
                                         </div>
                                     </form>
+                                    <?php
+                                    $response = null;
+                                    if (isset($_POST['Product_Name']) && isset($_POST['Product_Description']) && isset($_POST['Product_Type']) && isset($_POST['Product_Price']) && isset($_POST['Product_NumberLeft'])) {
+                                        // Retrieve the value of the 'id' parameter
+                                        $name = $_POST['Product_Name'];
+                                        $description = $_POST['Product_Description'];
+                                        $type = $_POST['Product_Type'];
+                                        $price = (int)$_POST['Product_Price'];
+                                        $nbLeft = (int)$_POST['Product_NumberLeft'];
+
+                                        $new_Product = array(
+                                                'Product_Name' => $name,
+                                                'Product_Description' => $description,
+                                                'Product_Type' => $type,
+                                                'Product_Price' => $price,
+                                                'Product_NumberLeft' => $nbLeft
+                                        );
+
+                                        $json_product = json_encode($new_Product);
+
+                                        // Construct the products URL
+                                        $url = "http://admin_API:8080/api/products";
+
+                                        $curl = curl_init();
+
+                                        curl_setopt_array($curl, array(
+                                            CURLOPT_URL => $url,
+                                            CURLOPT_RETURNTRANSFER => true,
+                                            CURLOPT_ENCODING => "",
+                                            CURLOPT_MAXREDIRS => 10,
+                                            CURLOPT_TIMEOUT => 0,
+                                            CURLOPT_FOLLOWLOCATION => true,
+                                            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                                            CURLOPT_CUSTOMREQUEST => "POST",
+                                            CURLOPT_POSTFIELDS => $json_product,
+                                            CURLOPT_HTTPHEADER => array(
+                                                    'Content-Type: application/json',
+                                                    'Content-Length: ' . strlen($json_product)
+                                            ),
+                                        ));
+
+                                        // LE RESULTAT DE L'API EST UN JSON QUI SE RETROUVERA DANS LA VARIABLE $response
+                                        $response = curl_exec($curl);
+
+                                        curl_close($curl);
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
