@@ -63,14 +63,14 @@
                 <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Client information:</h6>
-                        <a class="collapse-item active" href="Users.html">Users</a>
+                        <a class="collapse-item active" href="Users.php">Users</a>
     <!--                    <a class="collapse-item" href="Photos.html">Photos</a>
                         <a class="collapse-item" href="Addresses.html">Addresses</a>
                         <a class="collapse-item" href="Carts.html">Carts</a>
                         <a class="collapse-item" href="Payments.html">Payments</a>-->
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Sales information:</h6>
-                        <a class="collapse-item" href="Products.html">Products</a>
+                        <a class="collapse-item" href="Products.php">Products</a>
      <!--                   <a class="collapse-item" href="ShoppingLists.html">ShoppingLists</a>
                         <a class="collapse-item" href="Commands.html">Commands</a>
                         <a class="collapse-item" href="Invoices.html">Invoices</a>
@@ -319,11 +319,17 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">USER CRUD requests</h1>
+                        <a href="../allUsers.php" class="btn btn-info btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-info-circle"></i>
+                                        </span>
+                            <span class="text">See all Users</span>
+                        </a>
                     </div>
 
                     <div class="row">
 
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
 
                             <!-- Collapsable Card Example -->
                             <div class="card shadow mb-4">
@@ -335,7 +341,7 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse" id="collapseCardExample1">
                                     <div class="card-body">
-                                        <form action="http://localhost:8080/api/user" method="post" class="form">
+                                        <form action="http://localhost:8000/admintemplate/CRUD/Users.php" method="post" class="form">
                                             <div class="form">
                                                 <label>Enter your FirstName: <input type="text" name="User_FirstName" required /></label>
                                             </div>
@@ -359,7 +365,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
 
                             <!-- Collapsable Card Example -->
                             <div class="card shadow mb-4">
@@ -371,8 +377,6 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse" id="collapseCardExample2">
                                     <div class="card-body">
-
-                                        <!--<form action="http://localhost:8080/api/users" method="get" class="form">-->
                                         <form action="http://localhost:8000/admintemplate/CRUD/Users.php" method="get" class="form">
                                             <div class="form">
                                                 <label>Enter user ID: <input type="text" name="id" required /></label>
@@ -382,7 +386,7 @@
                                             </div>
                                        </form>
                                     </div>
-                                    <div class="card-body" id="resultat">
+                                    <div class="card-body">
                                         <table class="table table-bordered">
                                             <tbody>
                                             <tr>
@@ -412,9 +416,7 @@
                                                 CURLOPT_FOLLOWLOCATION => true,
                                                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                                                 CURLOPT_CUSTOMREQUEST => "GET",
-
-                                                CURLOPT_POSTFIELDS => false, //array("param1" => "xxxxx","param2" => "blablabla", xxxxxxx),
-
+                                                CURLOPT_POSTFIELDS => false,
                                                 CURLOPT_HTTPHEADER => array(),
                                             ));
 
@@ -423,26 +425,18 @@
 
                                             curl_close($curl);
 
-                                                    /*echo $response;*/
+                                            /*echo $response;*/
 
-                                                    $response = json_decode($response);
+                                            $response = json_decode($response);
 
-
-                                                echo "<tr>" .
-                                                    "<td>$response->User_Id</td>" .
-                                                "<td>$response->User_FirstName</td>" .
-                                                "<td>$response->User_LastName</td>" .
-                                                "<td>$response->User_Email</td>" .
-                                                "<td>$response->User_Password</td>" .
-                                                "<td>$response->User_Phone</td>" .
-                                                  "</tr>";
-
-
-/*                                                    foreach ($users as $key => $value) {
-                                                        echo "<tr>". $value . "</tr>";
-/*                                                        echo "<div>". $value . "</div>";
-                                                    }*/
-
+                                            echo "<tr>" .
+                                            "<td>$response->User_Id</td>" .
+                                            "<td>$response->User_FirstName</td>" .
+                                            "<td>$response->User_LastName</td>" .
+                                            "<td>$response->User_Email</td>" .
+                                            "<td>$response->User_Password</td>" .
+                                            "<td>$response->User_Phone</td>" .
+                                                "</tr>";
                                         }
                                         ?>
                                             </tbody>
@@ -451,7 +445,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
 
                             <!-- Collapsable Card Example -->
                             <div class="card shadow mb-4">
@@ -463,7 +457,7 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse" id="collapseCardExample3">
                                     <div class="card-body">
-                                        <form action="http://localhost:8080/api/user" method="put" class="form">
+                                        <form action="http://localhost:8000/admintemplate/CRUD/Users.php" method="put" class="form">
                                             <div class="form">
                                                 <label>Enter your FirstName: <input type="text" name="User_FirstName" required /></label>
                                             </div>
@@ -487,7 +481,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-6">
 
                             <!-- Collapsable Card Example -->
                             <div class="card shadow mb-4">
@@ -499,7 +493,7 @@
                                 <!-- Card Content - Collapse -->
                                 <div class="collapse" id="collapseCardExample4">
                                     <div class="card-body">
-                                        <form action="http://localhost:8080/api/user" method="delete" class="form">
+                                        <form action="http://localhost:8000/admintemplate/CRUD/Users.php" method="delete" class="form">
                                             <div class="form">
                                                 <label>Enter your FirstName: </label>
                                                 <input type="text" name="User_FirstName" required />
