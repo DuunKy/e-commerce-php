@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\csharp-project.csproj": {}
+    "/api/csharp-project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\csharp-project.csproj": {
+    "/api/csharp-project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\csharp-project.csproj",
+        "projectUniqueName": "/api/csharp-project.csproj",
         "projectName": "csharp-project",
-        "projectPath": "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\csharp-project.csproj",
-        "packagesPath": "C:\\Users\\tibof\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tibof\\Desktop\\Projet\\Project B2\\e-commerce-php\\CS-API\\obj\\",
+        "projectPath": "/api/csharp-project.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tibof\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

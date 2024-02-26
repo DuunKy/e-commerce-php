@@ -1,0 +1,99 @@
+.card {
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.cardImg {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed its original size */
+    height: 400px; /* Set the desired height */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+    border-radius: 25px;
+}
+
+.card-link {
+    /* Define your styles for card links here */
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+
+.cardContent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 25px;    
+    padding: 1.25px; /* Adjust as needed */
+    color:whitesmoke; /* Set the text color */
+    display: flex; /* Align children in a row */
+    align-items: center; /* Center items horizontally */
+    backdrop-filter: blur(1px);
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+cardTxtTitle {
+    font-size: 26px;
+    position: relative;
+    display: inline;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: auto; 
+    text-shadow: 0 0 8px #000000;
+    
+
+}
+
+cardTxtMoney {
+    font-size: 26px;
+    position: relative;
+    display: inline;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-top: auto; 
+    text-shadow: 0 0 8px #000000
+}
+
+
+cardTxt {
+    font-size: 18px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+    text-shadow: 0 0 8px #070202;
+}
+
+
+.buttonCard {
+    display: none;
+}
+
+.card:hover .cardContent {
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) for darkness */
+}
+
+
+.card:hover {
+
+    cardTxt {
+        transition: 0.5s;
+        opacity: 1;
+   
+        
+    }
+    
+    cardTxtTitle {
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    cardTxtMoney {
+        transition: 0.5s;
+        opacity: 0;
+    }
+}

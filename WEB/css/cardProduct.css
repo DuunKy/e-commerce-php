@@ -1,0 +1,47 @@
+.leftProduct {
+
+}
+
+.rightProduct {
+
+}
+
+.cardImg {
+    height: 700px;
+    width: 500px;
+    border-radius: 25px;    
+    color:whitesmoke; /* Set the text color */
+}
+
+.txtProduct {
+
+    align-content: baseline;
+    margin-left: 20px;
+
+}
+
+txtProductType {
+    font-size: 18px;
+}
+
+txtProductName {
+
+    font-size: 34px;
+}
+
+txtProductPrice {
+    font-size: 24px;
+}
+
+
+
+.buttonProduct {
+    border-radius: 8px;
+    border: none;
+    height: 50px;
+    width: 500px;
+}
+
+.buttonProduct:hover {
+    border: 1px solid black;
+}

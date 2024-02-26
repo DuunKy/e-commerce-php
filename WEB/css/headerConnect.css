@@ -1,0 +1,44 @@
+.headerRow {
+
+    padding: 6px 12px;
+    background-color:white;
+
+}
+
+.imgLogo {
+    height: 125px ;
+    width: 350px;
+}
+
+
+
+.logoContainer {
+    text-align: end;
+}
+
+.connectRow {
+    background-color: whitesmoke;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+}
+@media only screen and (max-width: 768px) {
+
+.imgLogo {
+    height: 100px ;
+    width: 250px;
+
+}    
+
+.logoContainer {
+    text-align: center;
+}
+    
+}
+    
+
+.connectRow .formContainer {
+    height: 100%; /* Ensure form container takes full height of connectRow */
+}
+
+.container-fluid {
+    overflow: hidden; /* Hide overflow content of the container */
+}

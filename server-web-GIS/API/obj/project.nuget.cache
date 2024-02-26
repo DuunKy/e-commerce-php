@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "v3FyXMtrpZTCJw9/Gt3hCPtUu2mZbtfM82PzF/Zcv7fcICXHywrXLDsuVT5SRmog/7tivdZtbs2hk/mZhPBqIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lhuillery\\Desktop\\Bachelor 2\\e-commerce-php\\server-web-GIS\\API\\csharp-project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lhuillery\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Lhuillery\\.nuget\\packages\\mysqlconnector\\2.3.3\\mysqlconnector.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
